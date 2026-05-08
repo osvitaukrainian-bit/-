@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Українська Освіта — Офіційний сайт</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #4ecdc4;
+            --text-white: #f8fafc;
+            --text-dim: #94a3b8;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-white); line-height: 1.8; }
+
+        nav {
+            padding: 1rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            position: fixed;
+            top: 0; width: 100%; z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo { font-size: 1.2rem; font-weight: 800; color: var(--accent-color); text-transform: uppercase; letter-spacing: 2px; }
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px 60px;
+            background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+        }
+
+        h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin-bottom: 2rem; color: var(--accent-color); font-weight: 800; line-height: 1.2; }
+        
+        .main-content {
+            max-width: 900px;
+            background: var(--card-bg);
+            padding: 50px;
+            border-radius: 32px;
+            border: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 40px;
+            text-align: left;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+        }
+
+        .content-section { margin-bottom: 30px; }
+        .content-section h2 { color: var(--accent-color); margin-bottom: 15px; font-size: 1.6rem; border-left: 4px solid var(--accent-color); padding-left: 15px; }
+        .content-section p { color: var(--text-dim); font-size: 1.1rem; margin-bottom: 10px; }
+
+        .feature-list { list-style: none; margin-top: 15px; }
+        .feature-list li { color: var(--text-dim); margin-bottom: 8px; display: flex; align-items: center; }
+        .feature-list li::before { content: '✓'; color: var(--accent-color); margin-right: 10px; font-weight: bold; }
+
+        .btn-download {
+            padding: 22px 60px;
+            background: var(--accent-color);
+            color: var(--bg-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.3rem;
+            transition: var(--transition);
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 45px rgba(78, 205, 196, 0.5);
+            filter: brightness(1.1);
+        }
+
+        footer { padding: 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); color: var(--text-dim); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Ukrainian Osvita</div>
+        <div style="font-size: 0.8rem; color: var(--text-dim);">Версія 1.0.4</div>
+    </nav>
+
+    <header>
+        <h1>Екосистема цифрового навчання</h1>
+        
+        <div class="main-content">
+            <div class="content-section">
+                <h2>Про продукт</h2>
+                <p>
+                    <b>«Українська Освіта»</b> — це спеціалізований програмний інструмент, створений розробником Denchik для полегшення навчального процесу в умовах дистанційної та змішаної освіти. Програма побудована на мові програмування Python, що забезпечує стабільну роботу та швидку обробку запитів.
+                </p>
+                <p>
+                    Основна концепція проекту полягає у створенні єдиного "вікна" для доступу до найважливіших освітніх ресурсів України. Замість витрачання часу на пошук якісних конспектів чи відео-уроків через загальні пошукові системи, користувач отримує релевантний результат за лічені секунди.
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>Ключові можливості</h2>
+                <ul class="feature-list">
+                    <li><b>Інтелектуальний фільтр:</b> автоматичне формування запитів для 1-11 класів.</li>
+                    <li><b>Мультиплатформенність:</b> одночасний пошук по YouTube, Naurok та Vseosvita.</li>
+                    <li><b>Оптимізація часу:</b> скорочення пошуку потрібної теми на 80%.</li>
+                    <li><b>Безпека:</b> прямий доступ до верифікованих джерел без реклами та спаму.</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Технічні переваги</h2>
+                <p>
+                    Комплекс використовує мінімальну кількість системних ресурсів, що дозволяє запускати його навіть на застарілих комп'ютерах та ноутбуках. Інтерфейс виконаний у сучасному стилі "Dark Mode", що суттєво знижує навантаження на очі при тривалій роботі з навчальними матеріалами.
+                </p>
+            </div>
+        </div>
+
+        <!-- КНОПКА З НОВОЮ СИЛКОЮ -->
+        <a href="https://drive.google.com/file/d/17_2CkLafuBZ5fc7QzBqU5L68qp-dSPrx/view?usp=sharing" 
+           target="_blank" 
+           class="btn-download">
+           Завантажити інсталятор (EXE)
+        </a>
+    </header>
+
+    <footer>
+        <p>&copy; 2026 Ukrainian Osvita Project. Платформа для допомоги вчителям.</p>
+    </footer>
+
+</body>
+</html>
